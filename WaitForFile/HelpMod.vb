@@ -1,0 +1,33 @@
+﻿Module HelpMod
+    Sub Help()
+        xtrace("Print Help")
+
+        Console.WriteLine(" ")
+        Console.WriteLine("---- " & AppName & " V" & AppVer & " -----------------------------------------")
+        Console.WriteLine(" Switches:")
+        Console.WriteLine("  -h = Show this help page")
+        Console.WriteLine("  /? = Show this help page")
+        Console.WriteLine("  -v = Verbose")
+        Console.WriteLine(" ")
+        Console.WriteLine(" Arguments:")
+        Console.WriteLine("  F=<File Name>")
+        Console.WriteLine("  wt=<wait time in sec.>                       the default is " & Delay.ToString)
+        Console.WriteLine("  mw=<Maximum wait count>                      the default is " & MaxWait.ToString)
+        Console.WriteLine("  go=true   : Wait for the file to be deleted, the default is " & FileGo.ToString)
+        Console.WriteLine("  go=false  : Wait for the file to be created")
+        Console.WriteLine(" ")
+        Console.WriteLine(" Log file = " & LogFile)
+        Console.WriteLine(" ")
+        Console.WriteLine(" Examples: ")
+        Console.WriteLine("  " & AppName & " F=C:\Temp\Test.log")
+        Console.WriteLine("  " & AppName & " wt=3 F=C:\Temp\Test.log")
+        Console.WriteLine("  " & AppName & " -v F=C:\Temp\Test.log wt=3 mw=3")
+        Console.WriteLine("  " & AppName & " F=C:\Temp\Test.log go=false wt=3")
+        Console.WriteLine(" ")
+        Console.WriteLine(" hans.van.buitenen@philips.com")
+        Console.WriteLine("----------------------------------------------------------------")
+        Console.WriteLine(" ")
+
+        wait(Delay)
+    End Sub
+End Module
